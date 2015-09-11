@@ -8,10 +8,7 @@
   letter-spacing: 3px;
 }
 
-#block {
-  margin-top: 10px;
-  width: 30px;
-  height: 35px;
+.highlight {
   background-color: yellow;
 }
 

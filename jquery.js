@@ -6,12 +6,17 @@ $(document).ready(function() {
 			$('#keyboard-lower-container').hide();
 			$('#keyboard-upper-container').show();
 		};
+		
 	});
-	$(document).keyup(function(e){
-		if (e.which === 16) {
-			$('#keyboard-upper-container').hide();
-			$('#keyboard-lower-container').show();
-		};
+	$(document).keyup(function(e) {
+   		 if (e.which === 16) {
+  		 $('#keyboard-upper-container').hide();
+  		 $('#keyboard-lower-container').show();
+   		 }
+   		else 
+   		$('.key').removeClass('highlight');
+		   
+    	});
 	
 	});
 	$(document).keypress(function(e){
@@ -19,7 +24,13 @@ $(document).ready(function() {
     if (s.match(/[a-zA-Z]/),(/[32]/))
         console.log(s + ' is a match!');
 	});
-	/*var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tain nate eate tea anne inant nean', 'itant eate anot eat nato inate eat anot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
+	
+	$(document).keypress(function(e) {
+    var pressKey =e.charCode;
+    $('#'+pressKey).addClass('highlight');
+});
+	
+	/*var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tain nate eate tea anne inant nean', 'itant eate anot eat nato inate eat anot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'].show;
 	var lines = [];
 	var lineCount = 0;
 	$(sentences).each(function(){
@@ -37,4 +48,4 @@ $(document).ready(function() {
 	});
 
 	$('.test').append(lines[lineCount]);*/
-});
+	
